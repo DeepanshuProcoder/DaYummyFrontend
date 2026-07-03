@@ -8,6 +8,7 @@ function EditProduct() {
     const { id } = useParams();
 
     const navigate = useNavigate();
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const [product, setProduct] = useState({
 
@@ -37,7 +38,7 @@ function EditProduct() {
 
             const res = await axios.get(
 
-                `http://localhost:5000/api/products/${id}`
+                `${API_URL}/api/products/${id}`
 
             );
 
@@ -103,7 +104,7 @@ function EditProduct() {
 
             await axios.put(
 
-                `http://localhost:5000/api/products/${id}`,
+                `${API_URL}/api/products/${id}`,
 
                 formData,
 

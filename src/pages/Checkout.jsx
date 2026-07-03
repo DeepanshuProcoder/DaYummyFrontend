@@ -10,6 +10,7 @@ function Checkout({ cart, setCart }) {
     const [phone, setPhone] = useState("");
 
     const [address, setAddress] = useState("");
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const [paymentMethod, setPaymentMethod] = useState("Cash On Delivery");
     // Coupon States
@@ -67,7 +68,7 @@ const [placingOrder, setPlacingOrder] = useState(false);
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/coupons/available"
+                `${API_URL}/api/coupons/available`
 
             );
 
@@ -106,7 +107,7 @@ const [placingOrder, setPlacingOrder] = useState(false);
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/coupons/validate",
+                `${API_URL}/api/coupons/validate`,
 
                 {
 
@@ -244,7 +245,7 @@ const [placingOrder, setPlacingOrder] = useState(false);
 
         const res = await axios.post(
 
-            "http://localhost:5000/api/orders",
+            `${API_URL}/api/orders`,
 
             orderData
 
@@ -636,7 +637,7 @@ const [placingOrder, setPlacingOrder] = useState(false);
 
                                 <img
 
-                                    src={`http://localhost:5000/uploads/products/${item.image}`}
+                                    src={`${API_URL}/uploads/products/${item.image}`}
 
                                     alt={item.name}
 

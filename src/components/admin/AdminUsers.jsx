@@ -21,14 +21,14 @@ function AdminUsers() {
         return () => clearInterval(interval);
 
     }, []);
-
+const API_URL = import.meta.env.VITE_API_URL;
     const fetchUsers = async () => {
 
         try {
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/auth/users"
+                `${API_URL}/api/auth/users`
 
             );
 

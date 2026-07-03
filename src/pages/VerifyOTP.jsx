@@ -8,6 +8,7 @@ function VerifyOTP() {
     const navigate = useNavigate();
 
     const { state } = useLocation();
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const email = state?.email;
 
@@ -24,7 +25,7 @@ function VerifyOTP() {
 
             await axios.post(
 
-                "http://localhost:5000/api/auth/resend-otp",
+                `${API_URL}/api/auth/resend-otp`,
 
                 {
 
@@ -136,7 +137,7 @@ function VerifyOTP() {
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/auth/verify-otp",
+                `${API_URL}/api/auth/verify-otp`,
 
                 {
 

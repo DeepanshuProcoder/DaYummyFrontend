@@ -5,6 +5,7 @@ import axios from "axios";
 function AdminOrders() {
 
     const [orders, setOrders] = useState([]);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const [loading, setLoading] = useState(true);
 
@@ -19,7 +20,7 @@ function AdminOrders() {
         try {
 
             const res = await axios.get(
-                "http://localhost:5000/api/orders"
+                `${API_URL}/api/orders`
             );
 
             setOrders(res.data.orders);
@@ -46,7 +47,7 @@ function AdminOrders() {
 
             await axios.put(
 
-                `http://localhost:5000/api/orders/${id}`,
+                `${API_URL}/api/orders/${id}`,
 
                 {
 
@@ -81,7 +82,7 @@ function AdminOrders() {
 
             const res = await axios.delete(
 
-                `http://localhost:5000/api/orders/${id}`
+                `${API_URL}/api/orders/${id}`
 
             );
 
@@ -274,7 +275,7 @@ function AdminOrders() {
 
                                                     <img
 
-                                                        src={`http://localhost:5000/uploads/products/${item.image}`}
+                                                        src={`${API_URL}/uploads/products/${item.image}`}
 
                                                         alt={item.name}
 

@@ -10,7 +10,7 @@ import { useEffect, useState, useRef } from "react";
 import addsound from "../assets/sounds/add-to-cart.mp3";
 
 function Menu({ cart, setCart }) {
-
+const API_URL = import.meta.env.VITE_API_URL;
     const sound = useRef(new Audio(addsound));
 
     sound.current.volume = 0.5;
@@ -24,7 +24,7 @@ function Menu({ cart, setCart }) {
             try {
 
                 const res = await axios.get(
-                    "http://localhost:5000/api/products"
+                    `${API_URL}/api/products`
                 );
 
                 console.log(res.data);

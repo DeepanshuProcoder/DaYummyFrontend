@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 function Profile() {
 const navigate = useNavigate();
+const API_URL = import.meta.env.VITE_API_URL;
     const [profile, setProfile] = useState({
 
         fullName: "",
@@ -52,7 +53,7 @@ const navigate = useNavigate();
 
             const res = await axios.get(
 
-                `http://localhost:5000/api/profile/${userId}`
+                `${API_URL}/api/profile/${userId}`
 
             );
 
@@ -98,7 +99,7 @@ const navigate = useNavigate();
 
             const res = await axios.put(
 
-                `http://localhost:5000/api/profile/${userId}`,
+                `${API_URL}/api/profile/${userId}`,
 
                 profile
 
@@ -166,7 +167,7 @@ const navigate = useNavigate();
 
             const res = await axios.put(
 
-                `http://localhost:5000/api/profile/change-password/${userId}`,
+                `${API_URL}/api/profile/change-password/${userId}`,
 
                 passwordData
 

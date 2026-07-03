@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
 function ProductCard({ product, fetchProducts }) {
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const deleteProduct = async () => {
 
@@ -16,7 +17,7 @@ function ProductCard({ product, fetchProducts }) {
 
             await axios.delete(
 
-                `http://localhost:5000/api/products/${product._id}`
+                `${API_URL}/api/products/${product._id}`
 
             );
 
@@ -46,7 +47,7 @@ function ProductCard({ product, fetchProducts }) {
 
             <img
 
-                src={`http://localhost:5000/uploads/products/${product.image}`}
+                src={`${API_URL}/uploads/products/${product.image}`}
 
                 alt={product.name}
 

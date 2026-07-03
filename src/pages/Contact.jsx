@@ -10,7 +10,7 @@ const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 
 const [phone, setPhone] = useState("");
-
+const API_URL = import.meta.env.VITE_API_URL;
 const [subject, setSubject] = useState("");
 
 const [message, setMessage] = useState("");
@@ -24,7 +24,7 @@ const sendMessage = async () => {
 
         const res = await axios.post(
 
-            "http://localhost:5000/api/contact",
+            `${API_URL}/api/contact`,
 
             {
 

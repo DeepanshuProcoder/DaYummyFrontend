@@ -13,6 +13,7 @@ function AdminCoupons() {
     const [search, setSearch] = useState("");
 
     const [showForm, setShowForm] = useState(false);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const [editingCoupon, setEditingCoupon] = useState(null);
 
@@ -66,7 +67,7 @@ function AdminCoupons() {
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/coupons"
+                `${API_URL}/api/coupons`
 
             );
 
@@ -344,7 +345,7 @@ function AdminCoupons() {
 
                                                         await axios.put(
 
-                                                            `http://localhost:5000/api/coupons/toggle/${coupon._id}`
+                                                            `${API_URL}/api/coupons/toggle/${coupon._id}`
 
                                                         );
 
@@ -398,7 +399,7 @@ function AdminCoupons() {
 
                                                         await axios.delete(
 
-                                                            `http://localhost:5000/api/coupons/${coupon._id}`
+                                                            `${API_URL}/api/coupons/${coupon._id}`
 
                                                         );
 
@@ -796,7 +797,7 @@ function AdminCoupons() {
 
                                                 await axios.put(
 
-                                                    `http://localhost:5000/api/coupons/${editingCoupon._id}`,
+                                                    `${API_URL}/api/coupons/${editingCoupon._id}`,
 
                                                     formData
 
@@ -808,7 +809,7 @@ function AdminCoupons() {
 
                                                 await axios.post(
 
-                                                    "http://localhost:5000/api/coupons",
+                                                    `${API_URL}/api/coupons`,
 
                                                     formData
 

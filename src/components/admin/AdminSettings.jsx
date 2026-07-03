@@ -18,7 +18,7 @@ function AdminSettings() {
 
     const [estimatedTime, setEstimatedTime] = useState(30);
 
-
+const API_URL = import.meta.env.VITE_API_URL;
 
     const [autoAccept, setAutoAccept] = useState(false);
     const [acceptOrders, setAcceptOrders] = useState(true);
@@ -70,7 +70,7 @@ const [savingNotifications, setSavingNotifications] = useState(false);
 
             const res = await axios.put(
 
-                "http://localhost:5000/api/settings/change-password",
+                `${API_URL}/api/settings/change-password`,
 
                 {
 
@@ -155,7 +155,7 @@ const [savingNotifications, setSavingNotifications] = useState(false);
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/settings/profile",
+                `${API_URL}/api/settings/profile`,
 
                 {
 
@@ -229,7 +229,7 @@ const [savingNotifications, setSavingNotifications] = useState(false);
 
             const res = await axios.put(
 
-                "http://localhost:5000/api/settings/profile",
+                `${API_URL}/api/settings/profile`,
 
                 formData,
 
@@ -271,7 +271,7 @@ const [savingNotifications, setSavingNotifications] = useState(false);
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/settings/orders"
+                `${API_URL}/api/settings/orders`
 
             );
 
@@ -306,7 +306,7 @@ const [savingNotifications, setSavingNotifications] = useState(false);
 
             const res = await axios.put(
 
-                "http://localhost:5000/api/settings/orders",
+                `${API_URL}/api/settings/orders`,
 
                 {
 
@@ -473,7 +473,7 @@ const [savingNotifications, setSavingNotifications] = useState(false);
 
                                     <img
 
-                                        src={`http://localhost:5000/${admin.profileImage}`}
+                                        src={`${API_URL}/${admin.profileImage}`}
 
                                         alt="Admin"
 

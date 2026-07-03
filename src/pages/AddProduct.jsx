@@ -4,7 +4,7 @@ import axios from "axios";
 import "../styles/AddProduct.css";
 
 function AddProduct() {
-
+const API_URL = import.meta.env.VITE_API_URL;
     const [product, setProduct] = useState({
 
         name: "",
@@ -77,7 +77,7 @@ function AddProduct() {
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/products/add",
+                `${API_URL}/api/products/add`,
 
                 formData,
 

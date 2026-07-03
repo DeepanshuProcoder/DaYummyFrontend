@@ -6,6 +6,7 @@ import "../../styles/RecentOrders.css";
 function RecentOrders() {
 
     const [recentOrders, setRecentOrders] = useState([]);
+    const API_URL = import.meta.env.VITE_API_URL;
 
     useEffect(() => {
 
@@ -19,7 +20,7 @@ function RecentOrders() {
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/orders"
+                `${API_URL}/api/orders`
 
             );
 

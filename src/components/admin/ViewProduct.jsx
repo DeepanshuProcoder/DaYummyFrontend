@@ -6,6 +6,7 @@ import "../../styles/ViewProduct.css";
 function ViewProduct() {
 
     const { id } = useParams();
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const [product, setProduct] = useState(null);
 
@@ -21,7 +22,7 @@ function ViewProduct() {
 
             const res = await axios.get(
 
-                `http://localhost:5000/api/products/${id}`
+                `${API_URL}/api/products/${id}`
 
             );
 
@@ -51,7 +52,7 @@ function ViewProduct() {
 
                 <img
 
-                    src={`http://localhost:5000/uploads/products/${product.image}`}
+                    src={`${API_URL}/uploads/products/${product.image}`}
 
                     alt={product.name}
 

@@ -14,6 +14,7 @@ function Orders() {
     const [currentTime, setCurrentTime] = useState(Date.now());
 
     const token = localStorage.getItem("token");
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const role = localStorage.getItem("role");
 
@@ -59,7 +60,7 @@ function Orders() {
 
             const res = await axios.get(
 
-                `http://localhost:5000/api/orders/my/${userId}`
+                `${API_URL}/api/orders/my/${userId}`
 
             );
 
@@ -87,7 +88,7 @@ function Orders() {
 
             const res = await axios.put(
 
-                `http://localhost:5000/api/orders/cancel/${id}`
+                `${API_URL}/api/orders/cancel/${id}`
 
             );
 
@@ -390,7 +391,7 @@ function Orders() {
 
                                                 <img
 
-                                                    src={`http://localhost:5000/uploads/products/${item.image}`}
+                                                    src={`${API_URL}/uploads/products/${item.image}`}
 
                                                     alt={item.name}
 

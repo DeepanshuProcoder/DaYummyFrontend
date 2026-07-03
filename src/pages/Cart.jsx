@@ -7,6 +7,7 @@ import paysound from "../assets/sounds/proceed.mp3";
 function Cart({ cart, setCart }) {
 
     const navigate = useNavigate();
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const audio = useRef(new Audio(paysound));
 
@@ -47,7 +48,7 @@ function Cart({ cart, setCart }) {
 
             const res = await axios.get(
 
-                "http://localhost:5000/api/coupons/available"
+                `${API_URL}/api/coupons/available`
 
             );
 
@@ -209,7 +210,7 @@ function Cart({ cart, setCart }) {
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/coupons/validate",
+                `${API_URL}/api/coupons/validate`,
 
                 {
 
@@ -387,7 +388,7 @@ function Cart({ cart, setCart }) {
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/orders",
+                `${API_URL}/api/orders`,
 
                 orderData
 
@@ -477,7 +478,7 @@ function Cart({ cart, setCart }) {
 
                                 >
                                     <img
-                                        src={`http://localhost:5000/uploads/products/${item.image}`}
+                                        src={`${API_URL}/uploads/products/${item.image}`}
                                         className="cart-image"
                                         alt={item.name}
                                     />

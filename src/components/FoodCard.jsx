@@ -6,7 +6,7 @@ function FoodCard({ product, addToCart }) {
 
            <img
 
-    src={`http://localhost:5000/uploads/products/${product.image}`}
+    src={`${API_URL}/uploads/products/${product.image}`}
 
     className="sel-item"
 

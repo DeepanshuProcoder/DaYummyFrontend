@@ -4,12 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaUserCircle, FaClipboardList, FaSignOutAlt } from "react-icons/fa";
 import logo from "../assets/LogoWebsite.png";
 import searchicon from "../assets/search.png";
+
 import axios from "axios";
 
 function Navbar() {
   const navigate = useNavigate();
   const profileRef = useRef(null);
-
+  const API_URL = import.meta.env.VITE_API_URL;
   const [showMenu, setShowMenu] = useState(false);
   const [menuPinned, setMenuPinned] = useState(false);
   const [auth, setAuth] = useState({
@@ -49,7 +50,7 @@ function Navbar() {
 
         await axios.put(
 
-            `http://localhost:5000/api/auth/logout/${localStorage.getItem("userId")}`
+            `${API_URL}/api/auth/logout/${localStorage.getItem("userId")}`
 
         );
 

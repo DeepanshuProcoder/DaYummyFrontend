@@ -9,13 +9,14 @@ function ProductManagement() {
     const [products, setProducts] = useState([]);
 
     const [search, setSearch] = useState("");
+    const API_URL = import.meta.env.VITE_API_URL;
 
     const fetchProducts = async () => {
 
         try {
 
             const res = await axios.get(
-                "http://localhost:5000/api/products"
+                `${API_URL}/api/products`
             );
 
             setProducts(res.data.products);
@@ -44,7 +45,7 @@ function ProductManagement() {
 
             const res = await axios.get(
 
-                `http://localhost:5000/api/products/search?search=${keyword}`
+                `${API_URL}/api/products/search?search=${keyword}`
 
             );
 
