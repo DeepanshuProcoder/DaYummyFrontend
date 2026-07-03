@@ -1,4 +1,4 @@
-import "../styles/Cart.css";
+import "../styles/cart.css";
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";

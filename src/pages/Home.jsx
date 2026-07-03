@@ -5,7 +5,7 @@ import SubNavbar from '../components/SubNavbar'
 import Hero from '../components/Hero'
 import 'bootstrap/dist/css/bootstrap.css'
 import CarouselFoodHero from '../components/CrouselFoodHero'
-import Carousel2 from '../components/crousel2'
+import Carousel2 from '../components/Crousel2'
 import MovingHeadline from '../components/MarqueeHome'
 
 function HomePage() {
