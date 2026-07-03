@@ -1,0 +1,360 @@
+/* ===========================================
+                PAGE
+=========================================== */
+
+.contact-page{
+
+    width:100%;
+
+    background:#f8f9fc;
+
+    overflow:hidden;
+
+}
+
+/* ===========================================
+                HERO
+=========================================== */
+
+.contact-hero{
+
+    height:55vh;
+
+    background:url("/images/contact-banner.jpg") center/cover no-repeat;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.contact-overlay{
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.contact-overlay h1{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+    color:#c9505c;
+font-weight:bold;
+}
+
+.contact-overlay p{
+
+    font-size:24px;
+
+    color:#f1f1f1;
+    
+
+}
+
+/* ===========================================
+            CONTACT SECTION
+=========================================== */
+
+.contact-container{
+
+    max-width:1450px;
+
+    margin:90px auto;
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:50px;
+
+    padding:0 35px;
+
+}
+
+/* ===========================================
+            LEFT SIDE
+=========================================== */
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.contact-info h2{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.info-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+    border-left:6px solid #ff7a00;
+
+    box-shadow:0 18px 45px rgba(255,122,0,.18);
+
+}
+
+.info-card h3{
+
+    color:#ff6b00;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.info-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ===========================================
+            RIGHT SIDE
+=========================================== */
+
+.contact-form{
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.contact-form h2{
+
+    font-size:38px;
+
+    margin-bottom:35px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+    width:100%;
+
+    margin-bottom:22px;
+
+    padding:18px;
+
+    border:2px solid #ececec;
+
+    border-radius:16px;
+
+    outline:none;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+
+    resize:none;
+
+}
+
+.contact-form input:focus,
+
+.contact-form textarea:focus{
+
+    border-color:#ff7a00;
+
+    box-shadow:0 0 15px rgba(255,122,0,.18);
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#ff8d00,#ff5b00);
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(255,122,0,.35);
+
+}
+/* ===========================================
+                GOOGLE MAP
+=========================================== */
+/* ================= MAP ================= */
+
+.map-section{
+
+    max-width:1400px;
+
+    margin:100px auto;
+
+    padding:0 40px;
+
+    text-align:center;
+
+}
+
+.map-section h2{
+
+    font-size:44px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.map-subtitle{
+
+    font-size:18px;
+
+    color:#777;
+
+    margin-bottom:35px;
+
+}
+
+.map-section iframe{
+
+    width:100%;
+
+    height:520px;
+
+    border:none;
+
+    border-radius:28px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.map-section iframe:hover{
+
+    transform:scale(1.01);
+
+    box-shadow:0 25px 55px rgba(255,122,0,.20);
+
+}
+
+
+
+
+
+
+/* ===========================================
+                FAQ
+=========================================== */
+
+
+
+/* ===========================================
+                RESPONSIVE
+=========================================== */
+
+@media(max-width:1000px){
+
+    .contact-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .contact-overlay h1{
+
+        font-size:45px;
+
+    }
+
+    .contact-overlay p{
+
+        font-size:18px;
+
+    }
+
+    .contact-form{
+
+        padding:30px;
+
+    }
+
+}

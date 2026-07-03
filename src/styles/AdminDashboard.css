@@ -1,0 +1,306 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* =======================
+        Main Layout
+======================= */
+
+.admin-container{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =======================
+        Sidebar
+======================= */
+
+.sidebar{
+
+    width:260px;
+
+    background:linear-gradient(180deg,#ff6b35,#ff914d);
+
+    color:white;
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+
+}
+
+.sidebar h2{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.sidebar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+    font-size:18px;
+
+    font-weight:500;
+
+}
+
+.sidebar a:hover{
+
+    background:white;
+
+    color:#ff6b35;
+
+    transform:translateX(8px);
+
+}
+
+/* =======================
+        Content
+======================= */
+
+.admin-content{
+
+    flex:1;
+
+    padding:40px;
+
+}
+
+.admin-content h1{
+
+    font-size:38px;
+
+    margin-bottom:35px;
+
+    color:#333;
+
+}
+
+/* =======================
+       Dashboard Cards
+======================= */
+
+.dashboard-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:45px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+    color:#777;
+
+    margin-bottom:15px;
+
+}
+
+.card h2{
+
+    color:#ff6b35;
+
+    font-size:35px;
+
+}
+
+/* =======================
+       Recent Orders
+======================= */
+
+.recent-orders{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.recent-orders h2{
+
+    margin-bottom:25px;
+
+    color:#333;
+
+}
+
+.recent-orders table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.recent-orders th{
+
+    background:#ff6b35;
+
+    color:white;
+
+    padding:16px;
+
+    font-size:17px;
+
+}
+
+.recent-orders td{
+
+    padding:18px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+    font-size:16px;
+
+}
+
+.recent-orders tr:hover{
+
+    background:#fff3eb;
+
+}
+
+/* =======================
+        Scrollbar
+======================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff6b35;
+
+    border-radius:20px;
+
+}
+
+/* =======================
+       Responsive
+======================= */
+
+@media(max-width:1200px){
+
+    .dashboard-cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .admin-container{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+
+        flex-direction:row;
+
+        overflow-x:auto;
+
+        gap:12px;
+
+        align-items:center;
+
+    }
+
+    .sidebar h2{
+
+        display:none;
+
+    }
+
+    .sidebar a{
+
+        margin-bottom:0;
+
+        white-space:nowrap;
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .dashboard-cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

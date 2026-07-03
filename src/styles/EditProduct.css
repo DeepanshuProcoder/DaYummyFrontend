@@ -1,0 +1,207 @@
+.edit-product-page{
+
+    min-height:100vh;
+
+    background:#f5f7fb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.edit-product-card{
+
+    width:650px;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.edit-product-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.edit-product-card h1{
+
+    text-align:center;
+
+    color:#ff7a00;
+
+    margin-bottom:35px;
+
+    font-size:36px;
+
+}
+
+.edit-product-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.edit-product-card input,
+
+.edit-product-card textarea,
+
+.edit-product-card select{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+}
+
+.edit-product-card textarea{
+
+    resize:none;
+
+    height:130px;
+
+}
+
+.edit-product-card input:focus,
+
+.edit-product-card textarea:focus,
+
+.edit-product-card select:focus{
+
+    border-color:#ff7a00;
+
+    box-shadow:0 0 10px rgba(255,122,0,.25);
+
+}
+
+.edit-product-card input[type="file"]{
+
+    padding:12px;
+
+    background:#fafafa;
+
+    cursor:pointer;
+
+}
+
+.available-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+.available-box input{
+
+    width:20px;
+
+    height:20px;
+
+    cursor:pointer;
+
+}
+
+.update-btn{
+
+    margin-top:15px;
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff7a00;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.update-btn:hover{
+
+    background:#e66d00;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(255,122,0,.3);
+
+}
+
+.current-image{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:3px solid #eee;
+
+    margin:10px auto;
+
+    display:block;
+
+}
+
+@media(max-width:700px){
+
+    .edit-product-card{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+}

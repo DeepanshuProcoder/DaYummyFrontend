@@ -1,0 +1,645 @@
+/* ================= PAGE ================= */
+
+.admin-coupons{
+
+    padding:40px;
+
+    background:#f5f7fb;
+
+    min-height:100vh;
+
+}
+
+/* ================= HEADER ================= */
+
+.coupon-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.coupon-header h1{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#222;
+
+    margin:0;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+/* ================= SEARCH ================= */
+
+.coupon-search{
+
+    width:280px;
+
+    padding:12px 18px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.coupon-search:focus{
+
+    border-color:#ff7a00;
+
+    box-shadow:0 0 12px rgba(255,122,0,.25);
+
+}
+
+/* ================= ADD BUTTON ================= */
+
+.add-coupon-btn{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff7a00;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.add-coupon-btn:hover{
+
+    background:#ff6200;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(255,122,0,.35);
+
+}
+
+/* ================= TABLE ================= */
+
+.coupon-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.coupon-table thead{
+
+    background:#ff7a00;
+
+    color:white;
+
+}
+
+.coupon-table th{
+
+    padding:18px;
+
+    text-align:center;
+
+    font-size:16px;
+
+}
+
+.coupon-table td{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+    font-size:15px;
+
+}
+
+.coupon-table tbody tr{
+
+    transition:.25s;
+
+}
+
+.coupon-table tbody tr:hover{
+
+    background:#fff8f1;
+
+}
+/* ================= STATUS ================= */
+
+.active{
+
+    background:#d4f8d4;
+
+    color:#1b8b2c;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+.inactive{
+
+    background:#ffd8d8;
+
+    color:#d32121;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.edit-btn,
+.toggle-btn,
+.delete-btn{
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    margin:3px;
+
+    transition:.25s;
+
+}
+
+.edit-btn{
+
+    background:#4da3ff;
+
+    color:white;
+
+}
+
+.edit-btn:hover{
+
+    background:#2c8fff;
+
+    transform:translateY(-2px);
+
+}
+
+.toggle-btn{
+
+    background:#ffb300;
+
+    color:white;
+
+}
+
+.toggle-btn:hover{
+
+    background:#ff9800;
+
+    transform:translateY(-2px);
+
+}
+
+.delete-btn{
+
+    background:#ff4b4b;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    background:#e53935;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= MODAL ================= */
+
+.coupon-modal{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+/* ================= FORM ================= */
+
+.coupon-form{
+
+    background:white;
+
+    width:900px;
+
+    max-width:95%;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:popup .25s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.coupon-form h2{
+
+    margin-bottom:25px;
+
+    font-size:30px;
+
+    text-align:center;
+
+}
+
+/* ================= GRID ================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus{
+
+    border-color:#ff7a00;
+
+    box-shadow:0 0 10px rgba(255,122,0,.2);
+
+}
+
+.form-grid textarea{
+
+    min-height:90px;
+
+    resize:vertical;
+
+    grid-column:1 / span 2;
+
+}
+/* ================= STATUS ================= */
+
+.active{
+
+    background:#d4f8d4;
+
+    color:#1b8b2c;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+.inactive{
+
+    background:#ffd8d8;
+
+    color:#d32121;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.edit-btn,
+.toggle-btn,
+.delete-btn{
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    margin:3px;
+
+    transition:.25s;
+
+}
+
+.edit-btn{
+
+    background:#4da3ff;
+
+    color:white;
+
+}
+
+.edit-btn:hover{
+
+    background:#2c8fff;
+
+    transform:translateY(-2px);
+
+}
+
+.toggle-btn{
+
+    background:#ffb300;
+
+    color:white;
+
+}
+
+.toggle-btn:hover{
+
+    background:#ff9800;
+
+    transform:translateY(-2px);
+
+}
+
+.delete-btn{
+
+    background:#ff4b4b;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    background:#e53935;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= MODAL ================= */
+
+.coupon-modal{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+/* ================= FORM ================= */
+
+.coupon-form{
+
+    background:white;
+
+    width:900px;
+
+    max-width:95%;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:popup .25s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.coupon-form h2{
+
+    margin-bottom:25px;
+
+    font-size:30px;
+
+    text-align:center;
+
+}
+
+/* ================= GRID ================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.form-grid input,
+.form-grid select,
+.form-grid textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.form-grid input:focus,
+.form-grid select:focus,
+.form-grid textarea:focus{
+
+    border-color:#ff7a00;
+
+    box-shadow:0 0 10px rgba(255,122,0,.2);
+
+}
+
+.form-grid textarea{
+
+    min-height:90px;
+
+    resize:vertical;
+
+    grid-column:1 / span 2;
+
+}
+.save-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:12px;
+    background:#22c55e;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.cancel-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:12px;
+    background:#ef4444;
+    color:white;
+}

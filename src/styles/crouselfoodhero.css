@@ -1,0 +1,184 @@
+.carousel-container {
+
+    width: 600px;
+
+    margin-right: 100px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+}
+
+.slide {
+    position: relative;
+    text-align: center;
+}
+
+
+.carousel-image:hover {
+
+    transform:
+        perspective(1000px) rotateY(5deg) scale(1.03);
+
+}
+
+.carousel-caption {
+
+    position: absolute;
+
+    bottom: 0px;
+    /* Distance from bottom of image */
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: rgb(0, 0, 0);
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    text-shadow:
+        0px 2px 8px rgba(255, 255, 255, 0.8);
+
+    width: 80%;
+
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+}
+
+.prev-btn,
+.next-btn {
+
+    border: none;
+
+    background: white;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 100%;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+
+}
+
+.dots {
+
+    margin-top: 20px;
+
+}
+
+.dot {
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #cfcfcf;
+
+    display: inline-block;
+
+    margin: 0 6px;
+
+    cursor: pointer;
+
+}
+
+.active-dot {
+
+    background: orange;
+
+}
+
+.card-stack {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, .25);
+}
+
+/* common */
+
+.front-card,
+.middle-card,
+.back-card {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    transition:
+        transform 1.2s ease,
+        opacity 1.2s ease;
+    border-radius: 30px;
+
+}
+
+/* top card */
+
+.front-card {
+
+    z-index: 3;
+
+    transform:
+        translateY(0) scale(1);
+
+}
+
+/* card behind */
+
+.middle-card {
+
+    z-index: 2;
+
+    transform:
+        translateY(10px) scale(.96);
+
+    opacity: .6;
+
+}
+
+/* card further behind */
+
+.back-card {
+
+    z-index: 1;
+
+    transform:
+        translateY(20px) scale(.92);
+
+    opacity: 3;
+
+}

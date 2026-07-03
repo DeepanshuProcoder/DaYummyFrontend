@@ -1,0 +1,171 @@
+/* ================= Recent Orders ================= */
+
+.recent-orders{
+
+background:#fff;
+
+margin-top:40px;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.recent-orders h2{
+
+text-align:center;
+
+font-size:38px;
+
+font-weight:700;
+
+margin-bottom:30px;
+
+color:#222;
+
+}
+
+/* ================= Table ================= */
+
+.dashboard-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+overflow:hidden;
+
+border-radius:18px;
+
+}
+
+.dashboard-table thead{
+
+background:linear-gradient(90deg,#ff6b35,#ff8c42);
+
+color:white;
+
+}
+
+.dashboard-table th{
+
+padding:18px;
+
+font-size:18px;
+
+font-weight:700;
+
+text-align:center;
+
+letter-spacing:.5px;
+
+}
+
+.dashboard-table td{
+
+padding:18px;
+
+text-align:center;
+
+font-size:16px;
+
+border-bottom:1px solid #ececec;
+
+transition:.25s;
+
+}
+
+.dashboard-table tbody tr{
+
+transition:.25s;
+
+}
+
+.dashboard-table tbody tr:hover{
+
+background:#fff8f3;
+
+transform:scale(1.005);
+
+}
+
+/* ================= Status ================= */
+
+.status{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:bold;
+
+color:white;
+
+min-width:120px;
+
+}
+
+/* Pending */
+
+.status.pending{
+
+background:#f59e0b;
+
+}
+
+/* Preparing */
+
+.status.preparing{
+
+background:#3b82f6;
+
+}
+
+/* Out For Delivery */
+
+.status.out-for-delivery{
+
+background:#8b5cf6;
+
+}
+
+/* Delivered */
+
+.status.delivered{
+
+background:#22c55e;
+
+}
+
+/* Cancelled */
+
+.status.cancelled{
+
+background:#ef4444;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:1100px){
+
+.recent-orders{
+
+overflow-x:auto;
+
+}
+
+.dashboard-table{
+
+min-width:900px;
+
+}
+
+}

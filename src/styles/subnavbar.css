@@ -1,0 +1,66 @@
+.subnavbar-container{
+    background-color: #620ccb;
+    padding: 15px 0;
+    border-top: 4px solid #0083e1;
+    border-bottom: 0px solid #ea0ce3;
+    height: 40px;
+}
+
+.subnavbar-container ul{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 450px;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin-top: -10px;
+}
+
+.subnavbar-container ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.subnavbar-container ul li a:hover{
+    color: rgb(255, 50, 50);
+}
+.loc{
+    color: black;
+}
+
+/* TOGGLE CONTAINER */
+.toggle {
+    width: 40px;
+    height: 20px;
+    background: #ccc; /* light mode color */
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* DARK MODE BACKGROUND */
+.toggle.active {
+    background: #333; /* dark mode color */
+}
+
+/* SLIDING CIRCLE */
+.toggle-circle {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.5px;
+    left: 2px;
+    transition: 0.3s;
+  
+}
+
+/* MOVE RIGHT WHEN ACTIVE */
+.toggle.active .toggle-circle {
+    left: 23px;
+}

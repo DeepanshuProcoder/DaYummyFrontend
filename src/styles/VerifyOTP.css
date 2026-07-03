@@ -1,0 +1,255 @@
+/* Background */
+
+.otp-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#ffb347,#ff5f6d,#6a11cb);
+
+    background-size:300% 300%;
+
+    animation:bgMove 10s ease infinite;
+
+}
+
+/* Card */
+
+.otp-card{
+
+    width:500px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+/* Heading */
+
+.otp-card h1{
+
+    color:white;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+.otp-card p{
+
+    color:white;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.otp-card b{
+
+    color:#fff176;
+
+}
+
+/* OTP */
+
+.otp-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:35px;
+
+}
+
+.otp-container input{
+
+    width:60px;
+
+    height:70px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    transition:.25s;
+
+    font-weight:bold;
+
+}
+
+.otp-container input:focus{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+    0 0 20px #ff9800,
+
+    0 0 40px rgba(255,152,0,.5);
+
+}
+
+/* Timer */
+
+.otp-card h3{
+
+    color:white;
+
+    margin-bottom:25px;
+
+    font-size:24px;
+
+}
+
+/* Verify */
+
+.verify-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(90deg,#ff9800,#ff5722);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-weight:bold;
+
+}
+
+.verify-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(255,87,34,.45);
+
+}
+
+.verify-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/* Resend */
+
+.resend-btn{
+
+    margin-top:25px;
+
+    background:none;
+
+    border:none;
+
+    color:#fff176;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.resend-btn:hover{
+
+    transform:scale(1.08);
+
+    color:white;
+
+}
+
+/* Animation */
+
+@keyframes bgMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .otp-card{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+    .otp-container{
+
+        gap:8px;
+
+    }
+
+    .otp-container input{
+
+        width:45px;
+
+        height:55px;
+
+        font-size:22px;
+
+    }
+
+}
