@@ -1,7 +1,7 @@
 import "../styles/Contact.css";
 import aboutHero from "../assets/about-hero.png";
 import { useState } from "react";
-
+import emailjs from "@emailjs/browser";
 import axios from "axios";
 
 function Contact() {
@@ -10,7 +10,7 @@ const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 
 const [phone, setPhone] = useState("");
-const API_URL = import.meta.env.VITE_API_URL;
+
 const [subject, setSubject] = useState("");
 
 const [message, setMessage] = useState("");
@@ -18,13 +18,23 @@ const [message, setMessage] = useState("");
 const [sending, setSending] = useState(false);
 const sendMessage = async () => {
 
-    try{
+    if (!name || !email || !phone || !subject || !message) {
+
+        alert("Please fill all fields.");
+
+        return;
+
+    }
+
+    try {
 
         setSending(true);
 
-        const res = await axios.post(
+        await emailjs.send(
 
-            `${API_URL}/api/contact`,
+            "service_8emyqvs",
+
+            "template_ibazq49",
 
             {
 
@@ -36,13 +46,17 @@ const sendMessage = async () => {
 
                 subject,
 
-                message
+                message,
 
-            }
+                title: subject
+
+            },
+
+            "geVGBLamDPeOk9NskHY3R"
 
         );
 
-        alert(res.data.message);
+        alert("✅ Message Sent Successfully!");
 
         setName("");
 
@@ -56,26 +70,21 @@ const sendMessage = async () => {
 
     }
 
-    catch(err){
+    catch (err) {
 
-        alert(
+        console.error(err);
 
-            err.response?.data?.message ||
-
-            "Unable to send message."
-
-        );
+        alert("❌ Unable to send message.");
 
     }
 
-    finally{
+    finally {
 
         setSending(false);
 
     }
 
-};
-    return (
+};    return (
 
         <div className="contact-page">
 
